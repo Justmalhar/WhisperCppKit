@@ -34,9 +34,8 @@ Initial public release.
 
 - Swift Package (`WhisperCppKit`) targeting **macOS 13+** and **iOS 14+**.
 - Bundled `WhisperCpp.xcframework` as a SwiftPM **binary target**.
-- `WhisperCppKit` wrapper API for file transcription via `WhisperTranscriber.transcribeFile(...)`.
-- CLI tool: `whispercppkit-cli`
-  - Model management: `models list|path|status|pull|prune`
+- `WhisperCppKit` wrapper API for file transcription via `WhisperTranscriber.transcribeFile(...)`.CLI tool: `whispercppkit-cli`
+- - Model management: `models list|path|status|pull|prune`
   - Transcription modes: plain, JSON, streaming NDJSON
   - Progress rendering to stderr (pipe-friendly stdout)
   - `--translate`, `--threads`, `--lang`, `--verbose`
