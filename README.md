@@ -346,3 +346,13 @@ Licenced under [MIT](LICENSE)
 - ⏭ CI workflow (macOS build + tests)
 - ⏭ Prebuilt release artifacts (GitHub Releases)
 - ⏭ macOS app (Superwhisper-style) built on top of `WhisperCppKit`
+
+## Support Development
+
+To support development for this project you can donate on: [https://ko-fi.com/justmalhar](https://ko-fi.com/justmalhar)
+
+## Connect with Me
+
+- **Twitter/X**: [@justmalhar](https://twitter.com/justmalhar) 🛠
+- **LinkedIn**: [Malhar Ujawane](https://linkedin.com/in/justmalhar) 💻
+- **GitHub**: [justmalhar](https://github.com/justmalhar) 💻

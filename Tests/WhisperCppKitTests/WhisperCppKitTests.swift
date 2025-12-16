@@ -3,7 +3,7 @@ import XCTest
 
 final class WhisperCppKitTests: XCTestCase {
     func testPing() {
-        XCTAssertTrue(true)
+        WhisperCppKitSmokeTest.ping()
     }
 
     func testTranscribeIfConfigured() throws {

@@ -1,0 +1,55 @@
+name: Release (optional)
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Release tag (e.g. v0.1.1)"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: macos-14
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Pull Git LFS files (if any)
+        run: |
+          git lfs install
+          git lfs pull || true
+
+      - name: Toolchain info
+        run: |
+          swift --version
+          xcodebuild -version
+
+      # TODO: Replace this section with your actual build pipeline for WhisperCpp.xcframework.zip.
+      # If you already build the xcframework locally and commit it, you can instead just upload an existing zip.
+      #
+      # Recommended pattern:
+      # - Put the build logic into a repo script (e.g. Scripts/build_xcframework.sh)
+      # - Zip it as WhisperCpp.xcframework.zip
+      - name: Build WhisperCpp.xcframework.zip (TODO)
+        run: |
+          echo "TODO: add build script that produces WhisperCpp.xcframework.zip"
+          echo "For now, this workflow is a template."
+          exit 1
+
+      # Example for creating a GitHub Release and uploading the zip:
+      # - name: Create GitHub Release
+      #   uses: softprops/action-gh-release@v2
+      #   with:
+      #     tag_name: ${{ inputs.tag }}
+      #     name: ${{ inputs.tag }}
+      #     draft: false
+      #     prerelease: false
+      #     files: |
+      #       WhisperCpp.xcframework.zip
