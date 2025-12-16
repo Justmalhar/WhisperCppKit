@@ -25,6 +25,7 @@ let package = Package(
             linkerSettings: [
                 .linkedLibrary("c++"),
                 .linkedFramework("Accelerate"),
+                .linkedFramework("Metal"),
             ]
         ),
 
@@ -34,6 +35,7 @@ let package = Package(
             linkerSettings: [
                 .linkedLibrary("c++"),
                 .linkedFramework("Accelerate"),
+                .linkedFramework("Metal"),
             ]
         ),
 
@@ -43,6 +45,7 @@ let package = Package(
             linkerSettings: [
                 .linkedLibrary("c++"),
                 .linkedFramework("Accelerate"),
+                .linkedFramework("Metal"),
             ]
         ),
     ]
