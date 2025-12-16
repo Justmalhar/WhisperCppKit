@@ -15,7 +15,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "WhisperCpp",
-            path: "Frameworks/WhisperCpp.xcframework"
+            url: "https://github.com/Justmalhar/WhisperCppKit/releases/download/v0.1.0/WhisperCpp.xcframework.zip",
+            checksum: "3eedf470200f811fe59e360638c30e0e6250569b9004d197d4e3019d3ea14bd8"
         ),
 
         .target(
