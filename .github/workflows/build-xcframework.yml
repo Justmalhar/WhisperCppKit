@@ -1,0 +1,27 @@
+name: build-xcframework
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - name: Build XCFramework
+        run: |
+          chmod +x Scripts/build_xcframework.sh
+          Scripts/build_xcframework.sh
+      - name: Zip XCFramework
+        run: |
+          cd Frameworks
+          ditto -c -k --sequesterRsrc --keepParent WhisperCpp.xcframework WhisperCpp.xcframework.zip
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: WhisperCpp.xcframework.zip
+          path: Frameworks/WhisperCpp.xcframework.zip
