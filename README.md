@@ -1,5 +1,19 @@
 # WhisperCppKit
 
+<p align="center">
+  <a href="https://github.com/Justmalhar/WhisperCppKit/releases">
+    <img src="https://img.shields.io/github/v/release/Justmalhar/WhisperCppKit?display_name=tag&style=flat-square" alt="release">
+  </a>
+  &nbsp;
+  <a href="https://github.com/Justmalhar/WhisperCppKit/actions/workflows/ci.yml">
+    <img src="https://img.shields.io/github/actions/workflow/status/Justmalhar/WhisperCppKit/ci.yml?branch=main&style=flat-square" alt="CI">
+  </a>
+  &nbsp;
+  <a href="https://github.com/Justmalhar/WhisperCppKit/blob/main/LICENSE">
+    <img src="https://img.shields.io/badge/license-MIT-yellow?style=flat-square" alt="license">
+  </a>
+</p>
+
 Swift-first wrapper around **whisper.cpp** for **macOS** and **iOS**, packaged as a SwiftPM library with a companion CLI.
 
 - ✅ **Swift Package Manager** (library + CLI)
@@ -343,7 +357,7 @@ Licenced under [MIT](LICENSE)
 
 - ✅ SwiftPM library + CLI
 - ✅ Clean stdout/stderr separation for piping
-- ⏭ CI workflow (macOS build + tests)
+- ✅ CI workflow (macOS build + tests)
 - ⏭ Prebuilt release artifacts (GitHub Releases)
 - ⏭ macOS app (Superwhisper-style) built on top of `WhisperCppKit`
 
